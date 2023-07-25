@@ -81,13 +81,15 @@ const Image = styled.img`
   width: 100%;
   display: block;
   transform-origin: 50% 75%;
-  transition: transform 600ms;
+  transition: transform 600ms, filter 1000ms;
   will-change: transform;
+  filter: brightness(90%);
 
   @media (hover: hover) and (prefers-reduced-motion: no-preference) {
     ${Link}:hover &, ${Link}:focus & {
       transform: scale(1.1);
-      transition: transform 200ms;
+      transition: transform 200ms, filter 400ms;
+      filter: brightness(100%);
     }
   }
 `;
